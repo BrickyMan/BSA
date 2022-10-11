@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bricksman Secure Agency.</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/dossier.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<main>
+		<div class="dossier-wrapper">
+
+			<div id="dossierIntro" >
+				<div class="dossier-block">
+					<h2>BSA search tool</h2>
+					<button class="dossier-btn" id="dossierFindBtn">Find target</button>
+				</div>
+			</div>
+
+			<div id="dossierSearch" style="display: none;">
+				<div class="dossier-block">
+					<div class="dossier-search-photo">
+						<img id="dossierSearchPhoto" src="searchPh/0.jpg" alt="Searhed target">
+					</div>
+				</div>
+				<div class="dossier-block">
+					<h3 id="dossierSearchConclusion">Analysis...</h3>
+				</div>
+			</div>
+
+			<div class="dossier" id="dossier" style="display: none;">
+				<div class="dossier-block dossier-header">
+					<h1>Target: <span>Alexey K.</span></h1>
+					<h3>Callsign: <span>Bricksman</span></h3>
+				</div>
+				<div class="dossier-inner">
+					<div class="dossier-block dossier-photos">
+						<img src="img/dossier1.jpg" alt="Dossier profile">
+						<img src="img/dossier2.jpg" alt="Dossier full face">
+					</div>
+					<div class="dossier-block dossier-fingerprint">
+					   <img src="img/fingerprint.png" alt="Dossier fingerprint">
+					   <!-- <p>Target's fingerprints.</p> -->
+					</div>
+					<div class="dossier-block dossier-wanted">
+						<h2>Wanted for:</h2>
+						<ul>
+							<li>Knowledge of: HTML, CSS (SCSS/Sass), JS (jQuery), TS, React JS.</li>
+							<li>Extra hard-skills: Python, C, git, FTP.</li>
+							<li>Studing at School 42.</li>
+							<li>3+ years of teaching coding.</li>
+							<li>English upper-intermediate level.</li>
+							<li>█████████████ ██ █████████ ██████████</li>
+						</ul>
+					</div>
+					<div class="dossier-block dossier-description">
+						<ul>
+							<li>Name:</li>
+							<li>Vocation:</li>
+							<li>Sex:</li>
+							<li>Location:</li>
+							<li>Height:</li>
+							<li>Weight:</li>
+							<li>Github:</li>
+							<li>Telegram:</li>
+						</ul>
+						<ul>
+							<li>Alexey</li>
+							<li>Frontend</li>
+							<li>Male</li>
+							<li>████████</li>
+							<li>███</li>
+							<li>██</li>
+							<li><a href="github.com/BrickyMan">/BrickyMan</a></li>
+							<li><a href="">@BrickyMan</a></li>
+						</ul>
+					</div>
+				</div>
+				<button class="dossier-btn" id="dossierHackBtn">Hack target</button>
+			</div>
+
+			<div id="dossierTerminal" style="display: none;">
+				<div class="dossier-block">
+					<p><span>agent451@BSA: </span>~$ hack target 'Bricksman' -p</p>
+					<pre id="dossierTerminalText"></pre>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<script src="js/dossier.js"></script>
+</body>
+</html>
