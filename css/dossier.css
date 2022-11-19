@@ -10,13 +10,32 @@
 #dossierIntro, #dossierSearch, #dossierTerminal {
     background: rgba(0, 36, 59, 0.8);
     padding: 20px;
-    text-align: center;
     overflow: hidden;
-    /* color: rgb(76, 148, 69); */
+}
+
+#dossierIntro {
+    max-width: 550px;
+}
+
+#dossierIntro .dossier-block {
+    padding: 20px;
+}
+
+#dossierIntro h2 {
+    margin-bottom: 10px;
+}
+
+#dossierIntro ul {
+    padding-left: 20px;
+    margin-top: 10px;
 }
 
 #dossierSearch .dossier-block:not(.dossier-block:last-child) {
     margin-bottom: 10px;
+}
+
+#dossierSearch {
+    text-align: center;
 }
 
 .dossier-search-photo {
@@ -135,7 +154,6 @@
     max-width: 550px;
     height: 100%;
     max-height: 350px;
-    text-align: left;
 }
 
 #dossierTerminal .dossier-block {

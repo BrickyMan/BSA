@@ -39,16 +39,31 @@ dossierFindBtn.onclick = () => {
     }, 250 * 13)
 }
 
-let dossierTermialCommands = ['\n------------\n','checking for secure', '.', '.', '.', '\n', '', '', 'connecting to target ip', '.', '.', '.', '\n', '', '', 'forcing secure password', '.', '.', '.', '\n', 'password: ', 'I', '_', 'N', 'e', 'e', 'd', 'J', '0', 'b', '\n', '', '', 'password is correct!\n', '\n', '', 'opening target OS', '.', '.', '.'],
-    dossierTerminalText = document.querySelector('#dossierTerminalText');
+function bruteforce() {
+    let bruteforceText = ['password: a6$kCs13C', 'password: i8hJsaW2!','password: i_8bn4jcd', 'password: i_n7Acv;0', 'password: i_ne5%abL', 'password: i_nee&fXz', 'password: i_need24R', 'password: i_need(2y', 'password: i_neesdJ0?', 'password: i_needJ0b'],
+        dossierTerminalBruteforce = document.querySelector('#dossierTerminalBruteforce');
+
+    let i = 1;
+    let timer = setInterval(() => {
+        dossierTerminalBruteforce.innerHTML = bruteforceText[i++];
+        if (i == bruteforceText.length) {
+            clearInterval(timer);
+        }
+    }, 300);
+}
 
 dossierHackBtn.onclick = () => {
+    let dossierTermialCommands = [ '', '', '\n------------\n','connecting to target ip', '.', '.', '.', '\n', '', '', 'checking for secure', '.', '.', '.', '\n', '', '', 'attempting frequent passwords', '.', '.', '.', '', '\n', 'no frequent password feets!', '\n', '\n', '', '', 'use bruteforce? (y/n)', '\n', '', '', 'y', '\n'],
+    dossierTerminalText = document.querySelector('#dossierTerminalText');
+
     changeWindow(dossier, dossierTerminal);
-    let i = 0;
+
+    let i = 1;
     let timer = setInterval(() => {
         dossierTerminalText.innerHTML += dossierTermialCommands[i++];
         if (i == dossierTermialCommands.length) {
             clearInterval(timer);
+            bruteforce();
         }
     }, 300);
 }
